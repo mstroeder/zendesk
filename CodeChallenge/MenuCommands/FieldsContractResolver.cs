@@ -36,6 +36,24 @@ namespace CodeChallenge
             {
                 if (_Fields != null && _Fields.Length != 0)
                 {
+                    var builder = new StringBuilder();
+                    //  Make sure all fields exist.
+                    foreach(var field in _Fields)
+                    {
+                        if(items.FirstOrDefault(i=> i.PropertyName.Equals(field, StringComparison.CurrentCultureIgnoreCase)) == null)
+                        {
+                            if(builder.Length != 0)
+                            {
+                                builder.Append(",");
+                            }
+                            builder.Append(field);
+                        }
+                    }
+                    if(builder.Length != 0)
+                    {
+                        throw new Exception(string.Format("The fields '{0}' could not be found on the {1} model", builder.ToString(), _Table));
+                    }
+                    //  Remove fields that aren't specified in our fields list.
                     for (int loop = items.Count - 1; loop >= 0; loop--)
                     {
                         if (!_Fields.Contains<string>(items[loop].PropertyName, StringComparer.CurrentCultureIgnoreCase))
