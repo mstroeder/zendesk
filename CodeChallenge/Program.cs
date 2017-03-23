@@ -12,8 +12,6 @@ namespace CodeChallenge
         /// <summary>
         /// Build a list of commands available from the search application.
         /// </summary>
-        /// <param name="dbSet"></param>
-        /// <returns></returns>
         static Dictionary<string, ZenCommand> GetCommands()
         {
             var commands = new Dictionary<string, ZenCommand>(StringComparer.CurrentCultureIgnoreCase);
