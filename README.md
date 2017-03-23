@@ -6,6 +6,7 @@ A Runtime folder has been included that can be run without opening Visual Studio
 The Json files are located in the Data folder.
 
 The following commands are available from the console:
+~~~
 quit
 help
 select  search for items using the following syntax
@@ -26,3 +27,4 @@ fields  view a list of searchable fields
         Optionally pass a table name to only show fields for that table
         fields Users
 tables  view a list of searchable tables
+~~~
