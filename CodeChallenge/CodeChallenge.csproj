@@ -66,6 +66,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\CodeChallenge.exe.config" />
+    <None Include="bin\Debug\CodeChallenge.vshost.exe.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\CodeChallenge.exe" />
+    <None Include="bin\Debug\CodeChallenge.pdb" />
+    <None Include="bin\Debug\CodeChallenge.vshost.exe" />
+    <None Include="bin\Debug\Newtonsoft.Json.dll" />
+    <None Include="bin\Debug\Newtonsoft.Json.pdb" />
+    <None Include="bin\Debug\Newtonsoft.Json.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
