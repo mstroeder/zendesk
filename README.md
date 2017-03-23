@@ -30,4 +30,6 @@ tables  view a list of searchable tables
 ~~~
 The available commands are loaded into a Commands Dictionary. Additional commands can be added to the list without changing the processing loop.
 
-The tables that are available are loaded into a dbcontext object. To add additional tables you need to add an IEnumerable property for the table, and initialize an EntityDefinition on the constructor to allow the SearchEngine to find the table for processing. The tables are loaded on first use. The SearchEngine will automatically expand all model properties with a ForeignKey attribute. For now, only simple expressions are allowed in the where clause (no ands or ors). 
+The tables that are available are loaded into a dbcontext object. To add additional tables you need to add an IEnumerable property for the table, and initialize an EntityDefinition on the constructor to allow the SearchEngine to find the table for processing. The tables are loaded on first use. 
+
+The SearchEngine will automatically expand all model properties with a ForeignKey attribute. For now, only simple expressions are allowed in the where clause (no ands or ors). The SearchEngine has Find and FindByKey methods, where the FindByKey method will use a Dictionary of ids instead of enumerating the entities and reflecting the property to check the values.
